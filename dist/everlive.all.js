@@ -33787,6 +33787,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                resolve(res);
 	            })
 	                .catch(function (err) {
+	                _this.sdk.emit('afterExecute', query); // TODO: constant
 	                reject(err);
 	            });
 	        }, success, error);
