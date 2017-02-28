@@ -33777,6 +33777,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return utils_1.Utils.buildPromise(function (resolve, reject) {
 	            return _this._preProcess(query, data)
 	                .then(function (value) {
+	                _this.sdk.emit('beforeExec');
 	                return _this._process(query, data, value);
 	            })
 	                .then(function (value) {
